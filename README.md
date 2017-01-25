@@ -1,7 +1,18 @@
 # 咩咩单词
+
 微信小程序：咩咩单词
 
-![images/search-logo.png]
+![](images/search-logo.png)
+
+## Screenshots
+
+![](screenshots/Screenshots1.jpg)
+
+![](screenshots/Screenshots2.jpg)
+
+![](screenshots/Screenshots3.jpg)
+
+![](screenshots/Screenshots4.jpg)
 
 ## 版本说明
 
