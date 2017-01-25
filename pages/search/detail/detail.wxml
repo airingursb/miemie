@@ -1,0 +1,8 @@
+<view class="container">
+    <text class="word-content">{{content}}</text>
+    <view class="pron-container">
+      <image class="pron-icon" src="/images/pron-icon.png"></image>
+      <text class="word-pron" bindtap="read">/{{pron}}/</text>
+    </view>
+    <text class="word-definition">{{definition}}</text>
+</view>

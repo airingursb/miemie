@@ -1,0 +1,10 @@
+<view class="container">
+  <image class="logo" src="/images/search-logo.png"></image>
+  <text class="name">咩咩辞典</text>
+  <view class="input-container">
+    <input class="input-search" bindconfirm="search" placeholder="请输入您要查询的单词" type="text"/>
+  </view>
+  <view class="button-search" bindtap="help">
+    <text class="text-search">说明</text>
+  </view>
+</view>

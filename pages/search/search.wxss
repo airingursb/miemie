@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 224rpx;
+  height: 224rpx;
+  margin-top: 118rpx;
+}
+
+.name {
+  margin-top: 58rpx;
+  font-family: Songti SC;
+  font-size: 32rpx;
+  color: #585858;
+}
+
+.input-container {
+  margin-top: 94rpx;
+  width: 100%;
+  height: 88rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-search {
+  margin: auto;
+}
+
+.button-search {
+    margin: 226rpx;
+  display: flex;
+  flex-direction: column;
+  width: 360rpx;
+  height: 70rpx;
+  border: 2rpx solid #353535;
+  border-radius: 10rpx;
+  align-items: center;
+}
+
+.text-search {
+  margin: auto;
+  font-family: Songti TC;
+  font-size: 32rpx;
+  color: #585858;
+}

@@ -1,0 +1,11 @@
+/* pages/settings/clause/clause.wxss */
+
+.text-head {
+    font-family: STHeiti;
+    font-size: 32rpx;
+}
+
+.clause {
+    font-family: Adobe Fangsong Std;
+    font-size: 32rpx;
+}

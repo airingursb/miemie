@@ -1,0 +1,24 @@
+<view class="container">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="list-container">
+  <view class="list-item" bindtap="showMyWord">
+    <text class="list-name">我的单词</text>
+    <image class="list-icon" src="/images/chevron.png"></image>
+  </view>
+  <view class="list-item" bindtap="showClause">
+    <text class="list-name">使用条款</text>
+    <image class="list-icon" src="/images/chevron.png"></image>
+  </view>
+  <view class="list-item" bindtap="showHelp">
+    <text class="list-name">软件说明</text>
+    <image class="list-icon" src="/images/chevron.png"></image>
+  </view>
+  <view class="list-item" bindtap="showFeedback">
+    <text class="list-name">用户反馈</text>
+    <image class="list-icon" src="/images/chevron.png"></image>
+  </view>
+  </view>
+</view>
