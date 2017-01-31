@@ -27,7 +27,7 @@ Page({
   showMyWord: function () {
     wx.showModal({
       title: '提示',
-      content: '由于我的失误，将本月3次配置服务器的机会浪费完了，所以该功能下个月开放！请见谅！',
+      content: '此功能暂未开放，敬请期待！',
       showCancel: false,
       success: function (res) {
         if (res.confirm) {
@@ -65,14 +65,16 @@ Page({
     })
   },
   showFeedback: function () {
-    wx.showModal({
-      title: '提示',
-      content: '由于我的失误，将本月3次配置服务器的机会浪费完了，所以该功能下个月开放！请见谅！',
-      showCancel: false,
-      success: function (res) {
-        if (res.confirm) {
-          console.log('用户点击确定')
-        }
+    wx.navigateTo({
+      url: './feedback/feedback',
+      success: function(res){
+        // success
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
       }
     })
   }

@@ -1,2 +1,8 @@
-<!--pages/settings/feedback/feedback.wxml-->
-<text>pages/settings/feedback/feedback.wxml</text>
+<view class="container">
+    <text class="feedback-label">问题描述</text>
+
+    <textarea class="feedback-text" placeholder="请详细你所遇到的问题" bindblur="getContent"/>
+    <text class="connect-label">联系方式</text>
+    <textarea class="connect-text" placeholder="请留下您的联系方式（QQ/微信/电话/等）" bindblur="getConnection"/>
+    <button class="feedback-button" bindtap="submitSuggestion">提交</button>
+</view>

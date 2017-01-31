@@ -1,1 +1,44 @@
-/* pages/settings/feedback/feedback.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.feedback-label {
+    float: left;
+  margin-top: 40rpx;
+  font-size: 32rpx;
+}
+
+.feedback-text {
+  margin-top: 40rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  font-size: 32rpx;
+  width: 80%;
+  border-radius: 10rpx;
+}
+
+.connect-label {
+  margin-top: 60rpx;
+  font-size: 32rpx;
+}
+
+.connect-text {
+  margin-top: 40rpx;
+  background-color: #fff;
+  padding: 30rpx;
+  font-size: 32rpx;
+  width: 80%;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.feedback-button {
+  margin-top: 80rpx;
+  width: 88%;
+  font-size: 38rpx;
+}
