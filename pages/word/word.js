@@ -1,38 +1,18 @@
-var vocabulary = require('../../data/vocabulary.js')
+var list = require('../../data/word-list.js')
 
 Page({
     data: {
     },
     onLoad: function (options) {
 
-        var idx = Math.floor(Math.random() * 12346) + 1
-        var word = vocabulary.wordList[idx]
-        var that = this;
-        wx.request({
-            url: 'https://api.shanbay.com/bdc/search/?word=' + word,
-            data: {},
-            method: 'GET',
-            success: function (res) {
-                console.log(res)
-                that.setData({
-                    content: res.data.data.content,
-                    audio: res.data.data.audio_addresses.us[0],
-                    pron: res.data.data.pron,
-                    definition: res.data.data.definition
-                })
-                // wx.downloadFile({
-                //     url: res.data.data.audio_addresses.us[0], 
-                //     success: function (res) {
-                //         wx.playVoice({
-                //             filePath: res.tempFilePath
-                //         })
-                //     }
-                // })
-            },
-            fail: function () {
-            },
-            complete: function () {
-            }
+        var idx = Math.floor(Math.random() * 499) + 1
+        var word = list.wordList[idx]    
+    
+        this.setData({
+            content: word.content,
+            pron: word.pron,
+            definition: word.definition,
+            audio: word.audio
         })
 
     },
@@ -46,35 +26,43 @@ Page({
         this.setData({
             showNot: false
         })
-        var idx = Math.floor(Math.random() * 12346) + 1
-        var word = vocabulary.wordList[idx]
-        var that = this;
-        wx.request({
-            url: 'https://api.shanbay.com/bdc/search/?word=' + word,
-            data: {},
-            method: 'GET',
-            success: function (res) {
-                console.log(res)
-                that.setData({
-                    content: res.data.data.content,
-                    audio: res.data.data.audio_addresses.us[0],
-                    pron: res.data.data.pron,
-                    definition: res.data.data.definition
-                })
-                // wx.downloadFile({
-                //     url: res.data.data.audio_addresses.us[0], 
-                //     success: function (res) {
-                //         wx.playVoice({
-                //             filePath: res.tempFilePath
-                //         })
-                //     }
-                // })
-            },
-            fail: function () {
-            },
-            complete: function () {
-            }
+        var idx = Math.floor(Math.random() * 499) + 1
+        var word = list.wordList[idx]    
+    
+        this.setData({
+            content: word.content,
+            pron: word.pron,
+            definition: word.definition,
+            audio: word.audio
         })
+
+        // var that = this;
+        // wx.request({
+        //     url: 'https://api.shanbay.com/bdc/search/?word=' + word,
+        //     data: {},
+        //     method: 'GET',
+        //     success: function (res) {
+        //         console.log(res)
+        //         that.setData({
+        //             content: res.data.data.content,
+        //             audio: res.data.data.audio_addresses.us[0],
+        //             pron: res.data.data.pron,
+        //             definition: res.data.data.definition
+        //         })
+        //         // wx.downloadFile({
+        //         //     url: res.data.data.audio_addresses.us[0], 
+        //         //     success: function (res) {
+        //         //         wx.playVoice({
+        //         //             filePath: res.tempFilePath
+        //         //         })
+        //         //     }
+        //         // })
+        //     },
+        //     fail: function () {
+        //     },
+        //     complete: function () {
+        //     }
+        // })
     },
     read: function () {
         console.log(this.data.audio)

@@ -1,11 +1,15 @@
 <view class="container">
   <image class="logo" src="/images/search-logo.png"></image>
-  <text class="name">咩咩辞典 v0.0.1</text>
-  <text class="name">内测版</text>
+  <text class="name">咩咩单词 v1.0.1</text>
+  <text class="name">开发者信息</text>
   <image class="user-avatar" src="/images/face.png"></image>
   <text class="name">Airing</text>
   <text class="name">微博：@Airing</text>
   <text class="name">GitHub：@airingursb</text>
   <text class="name">个人主页：https://ursb.me</text>
+  <image class="user-avatar" src="/images/face2.png"></image>
+  <text class="name">muruko0713</text>
+  <text class="name">GitHub：@maruko0713</text>
+  <text class="name">个人主页：http://maruko0713.github.io</text>
   <text class="copy">本软件已开源：https://github.com/airingursb/miemie</text>
 </view>

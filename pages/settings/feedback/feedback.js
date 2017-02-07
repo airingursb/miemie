@@ -62,6 +62,17 @@ Page({
       "connect": this.data.connect,
       "user": this.data.userInfo.nickName
     });
+
+    wx.showModal({
+      title: '提示',
+      content: '提交成功！感谢您的反馈！',
+      showCancel: false,
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        }
+      }
+    })
   }
   
 })
