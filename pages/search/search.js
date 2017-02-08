@@ -65,7 +65,7 @@ Page({
   help: function () {
     wx.showModal({
       title: '提示',
-      content: '目前为测试版，只支持单词查询，输入后点击回车键即可查询。未来会加入丰富的内容内容，敬请期待！',
+      content: '输入单词后点击回车键即可查询',
       showCancel: false,
       success: function (res) {
         if (res.confirm) {

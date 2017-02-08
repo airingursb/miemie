@@ -4,10 +4,10 @@
     <text class="userinfo-nickname">{{userInfo.nickName}}</text>
   </view>
   <view class="list-container">
-  <view class="list-item" bindtap="showMyWord">
+  <!--<view class="list-item" bindtap="showMyWord">
     <text class="list-name">我的单词</text>
     <image class="list-icon" src="/images/chevron.png"></image>
-  </view>
+  </view>-->
   <view class="list-item" bindtap="showClause">
     <text class="list-name">使用条款</text>
     <image class="list-icon" src="/images/chevron.png"></image>
