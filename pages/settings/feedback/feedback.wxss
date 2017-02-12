@@ -8,7 +8,7 @@
 }
 
 .feedback-label {
-    float: left;
+  float: left;
   margin-top: 40rpx;
   font-size: 32rpx;
 }
