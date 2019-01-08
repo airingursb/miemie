@@ -1,7 +1,10 @@
 <view class="container">
   <view bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <view class="userinfo-avatar"> 
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    
+    <open-data class="userinfo-nickname" type="userNickName"></open-data>
   </view>
   <view class="list-container">
   <!--<view class="list-item" bindtap="showMyWord">
