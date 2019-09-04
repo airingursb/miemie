@@ -1,6 +1,6 @@
 @font-face {
-font-family: Chalkboard;
-src: url('/assets/font/chalkboard.ttf'),
+  font-family: Chalkboard;
+  src: url('/assets/font/chalkboard.ttf'),
 }
 
 .container {

@@ -12,7 +12,7 @@ Page({
     vocListMax: 12346
   },
 
-  onLoad: function(options) {
+  onLoad: () => {
     //从本地缓存单词表选取第一个单词
     var idx = Math.floor(Math.random() * this.data.worldListMax) + 1
     var word = list.wordList[idx]
@@ -25,46 +25,46 @@ Page({
     })
   },
 
-  show: function() {
+  show: () => {
     this.setData({
       showNot: true
     })
   },
 
-  next: function() {
+  next: () => {
     this.setData({
       showNot: false
     })
 
-    //从vocabulary.js中选取下一个单词
-    var idx = Math.floor(Math.random() * this.data.vocListMax) + 1
+    const { vocListMax, content, audioUrl } = this.data
+
+    // 从vocabulary.js中选取下一个单词
+    let idx = Math.floor(Math.random() * vocListMax) + 1
     this.setData({
       content: vocList.wordList[idx],
     })
 
-    var that = this;
     wx.request({
-      url: 'https://api.shanbay.com/bdc/search/?word=' + that.data.content,
+      url: `https://api.shanbay.com/bdc/search/?word=${content}`,
       data: {},
       method: 'GET',
-      success: function(res) {
-        console.log(res)
-        that.setData({
-          content: res.data.data.content,
-          audioUrl: res.data.data.us_audio,
-          pron: res.data.data.pron,
-          definition: res.data.data.definition
+      success: res => {
+
+        const data = res.data.data
+
+        this.setData({
+          content: data.content,
+          audioUrl: data.us_audio,
+          pron: data.pron,
+          definition: data.definition
         })
-        innerAudioContext.src = that.data.audioUrl
-      },
-      fail: function() {},
-      complete: function() {}
+        innerAudioContext.src = audioUrl
+      }
     })
   },
 
-  read: function() {
+  read: () => {
     if (this.data.audioUrl) {
-      console.log(this.data.audioUrl)
       innerAudioContext.play()
     }
   }

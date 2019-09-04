@@ -1,43 +1,40 @@
-//app.js
+// app.js
 
-var hotapp=require('./utils/hotapp.js');
-//hotapp.setDebug(true);
+const hotapp = require('./utils/hotapp.js')
+// hotapp.setDebug(true)
 
-var wilddog=require('./utils/wilddog-weapp-all.js');
-var config = {
+const wilddog = require('./utils/wilddog-weapp-all.js')
+const config = {
   syncURL: 'https://miemie.wilddogio.com',
   authDomain: 'miemie.wilddog.com'
 }
 
 App({
-  onLaunch: function () {
-    //调用API从本地缓存中获取数据
-    var logs = wx.getStorageSync('logs') || []
+  onLaunch: () => {
+    // 调用 API 从本地缓存中获取数据
+    const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
     wilddog.initializeApp(config)
-
   },
-  getUserInfo:function(cb){
-    var that = this
-    if(this.globalData.userInfo){
+  getUserInfo: cb => {
+    if (this.globalData.userInfo) {
       typeof cb == "function" && cb(this.globalData.userInfo)
-    }else{
-      //调用登录接口
+    } else {
       wx.login({
-        success: function () {
+        success: () => {
           wx.getUserInfo({
-            success: function (res) {
-              that.globalData.userInfo = res.userInfo
-              typeof cb == "function" && cb(that.globalData.userInfo)
+            success: res => {
+              this.globalData.userInfo = res.userInfo
+              typeof cb == "function" && cb(this.globalData.userInfo)
             }
           })
         }
       })
     }
   },
-  globalData:{
-    userInfo:null
+  globalData: {
+    userInfo: null
   }
 })
